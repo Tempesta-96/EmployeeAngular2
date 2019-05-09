@@ -1,0 +1,37 @@
+<div style="text-align:center">
+    <h1>
+        LOGIN PAGE
+    </h1>
+</div>
+Username is "username"
+<br>
+Password is "password"
+<br>
+<br>
+<div id='nav'>
+    <nav>
+        Click <a routerLink="/registerUser" routerLinkActive="active">here </a>to register a new
+        account.<br>
+    </nav>
+</div>
+<br>
+<div id='errormsg'> {{errormsg}} </div>
+<div id='msg'>{{msg}}</div>
+<div id='loginContainer' *ngIf="loginContainer">
+    <div id='loginUsername'>
+        <label>Employee Username:
+            <input [(ngModel)]="loginUsername" placeholder="Username">
+        </label>
+    </div>
+    <br>
+    <div id='loginPassword'>
+        <label>Employee Password:
+            <input [(ngModel)]="loginPassword" placeholder="Password" input type="password">
+        </label>
+    </div>
+    <br>
+    <br>
+    <button (click)="submit(loginUsername, loginPassword)">Submit</button>
+    <button (click)="clear()">Clear</button>
+    <br>
+</div>

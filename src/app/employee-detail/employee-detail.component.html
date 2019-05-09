@@ -1,0 +1,8 @@
+<div id="employeeDetails" *ngIf ="employee">
+  <h2>{{employee.name | uppercase}} Details</h2>
+  <div><span>ID: </span> {{employee.id}}</div>
+  <div><span>Name: </span> {{employee.name | uppercase}}</div>
+  <div><span>Designation: </span> {{employee.designation}}</div>
+  <div><span>Age: </span> {{employee.age}}</div>
+  <div><span>Salary: </span> {{employee.salary}}</div>
+</div>

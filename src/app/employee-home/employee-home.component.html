@@ -1,0 +1,51 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <button (click)="logout()">Logout</button>
+  <h1>
+    Welcome home!
+  </h1>
+</div>
+<h2>Here are some links to help you start: </h2>
+
+<nav>
+  <!-- <a routerLink="/employee" click=list()>Employee</a><br> -->
+  <a routerLink="/addEmployee">Add Employee</a><br>
+</nav>
+
+<div id='employeeList'>
+  <ul class="employees">
+    <div id='employeeRow'>
+      <li *ngFor="let employee of result" (click)="onSelect(employee)">
+        <span class="badge">ID : {{employee.id}}</span> NAME: {{employee.name}} DESIGNATION: {{employee.designation}}
+        AGE: {{employee.age}} SALARY: {{employee.salary}}
+        <div id='delButton'>
+          <button (click)="deleteEmp(employee)">Delete</button>
+        </div>
+      </li>
+    </div>
+  </ul>
+</div>
+
+<div *ngIf="selectedEmployee">
+  <h2>{{selectedEmployee.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{selectedEmployee.id}}</div>
+  <div id='employeeDetails'>
+    <label>name:
+      <input [(ngModel)]="selectedEmployee.name" placeholder="name">
+    </label><br>
+    <label>designation:
+      <input [(ngModel)]="selectedEmployee.designation" placeholder="designation">
+    </label><br>
+    <label>age:
+      <input [(ngModel)]="selectedEmployee.age" placeholder="age">
+    </label><br>
+    <label>salary:
+      <input [(ngModel)]="selectedEmployee.salary" placeholder="salary">
+    </label>
+  </div>
+  <div id='updateButton'>
+    <button (click)='updateEmp(selectedEmployee)'>Update</button>
+    <button (click)='resetEmp(Employee)'>Reset</button>
+  </div>
+
+</div>

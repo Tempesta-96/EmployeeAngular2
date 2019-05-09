@@ -1,0 +1,19 @@
+#containder{
+    align-content: left;
+}
+#addEmployee{
+    float: left;
+    width : 30%;
+}
+#updateEmployee{
+    float: left;
+    width: 30%;
+}
+#deleteEmployee{
+    float: left;
+    width: 30%;
+}
+
+#employee{
+    float:left;
+}

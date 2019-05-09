@@ -1,0 +1,28 @@
+<h1>
+    Register
+</h1>
+<div id='nav'>
+        <nav>
+            Click <a routerLink="/loginUser" routerLinkActive="active">here </a>to LOGIN<br>
+            <br>
+        </nav>
+    </div>
+<div id='loginContainer'>
+    {{msg}}
+    <div id='loginUsername'>
+        <label>User Username:
+            <input [(ngModel)]="loginUsername" placeholder="Username">
+        </label>
+    </div>
+    <br>
+    <div id='loginPassword'>
+        <label>User Password:
+            <input [(ngModel)]="loginPassword" placeholder="Password" input type="password">
+        </label>
+    </div>
+    <br>
+    <br>
+    <button (click)="submit(loginUsername, loginPassword)">Register</button>
+    <button (click)="clear()">Clear</button>
+    <br>
+</div>

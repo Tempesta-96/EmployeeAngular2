@@ -1,0 +1,42 @@
+<h1>
+  Enter Employee Details:
+</h1>
+<div id='addContainer'>
+  <div id='employeeId'>
+    <label>Employee ID:
+      <input [(ngModel)]="employeeId" placeholder="ID">
+    </label>
+  </div>
+  <br>
+  <div id='employeeName'>
+    <label>Employee Name :
+      <input [(ngModel)]="employeeName" placeholder="name">
+    </label>
+  </div>
+  <br>
+  <div id='employeeDesignation'>
+    <label>Employee Designation :
+      <input [(ngModel)]="employeeDesignation" placeholder="Designation">
+    </label>
+  </div>
+  <br>
+  <div id='employeeSalary'>
+    <label>Employee Salary :
+      <input [(ngModel)]="employeeSalary" placeholder="Salary">
+    </label>
+  </div>
+  <br>
+  <div id='employeeAge'>
+    <label>Employee Age :
+      <input [(ngModel)]="employeeAge" placeholder="Age">
+    </label>
+  </div>
+  <br>
+
+
+  <button (click)="submit(employeeId, employeeName, employeeDesignation, employeeSalary, employeeAge)">Submit</button>
+  <button (click)="clear()">Clear</button>
+  <br>
+  <br>
+</div>
+<button (click)="goHome()">Home</button>
